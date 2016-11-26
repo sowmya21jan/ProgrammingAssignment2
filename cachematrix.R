@@ -67,12 +67,29 @@ cacheSolve <- function(x = matrix(), ...) {
 # First Way
 a <- makeCacheMatrix(matrix(11:14,2,2)) 
 cacheSolve(a)	# This will compute the inverse as it did not find inverse in cache
+#      [,1] [,2]
+# [1,]   -7  6.5
+# [2,]    6 -5.5
+
 cacheSolve(a)   # This will give the inverse as output found in cache by previosu command
+# getting cached data
+#      [,1] [,2]
+# [1,]   -7  6.5
+# [2,]    6 -5.5
+       
 
 # Second Way
 a <- makeCacheMatrix() 
 a$set(matrix(11:14,2,2))  
 cacheSolve(a)
+#      [,1] [,2]
+# [1,]   -7  6.5
+# [2,]    6 -5.5
+
 cacheSolve(a)
+# getting cached data
+#      [,1] [,2]
+# [1,]   -7  6.5
+# [2,]    6 -5.5
 
 
